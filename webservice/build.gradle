@@ -1,0 +1,27 @@
+group 'com.qrcode.generator'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.springframework.boot', name: 'spring-boot-gradle-plugin', version: spring_boot_version
+    }
+}
+
+
+dependencies {
+    compile project(':generator')
+    compile project(':swagger')
+
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: spring_boot_version
+}

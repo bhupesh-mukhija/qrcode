@@ -1,0 +1,12 @@
+group 'com.qrcode.generator'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('com.mangofactory:swagger-springmvc:1.0.2')
+}
